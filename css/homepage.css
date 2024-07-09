@@ -1,0 +1,140 @@
+/* Homepage styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #bf7d15;
+    border-bottom: 1px solid #bf7d15;
+    padding: 1rem;
+    text-align: center;
+}
+
+header .logo {
+    max-width: 100px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li {
+    display: inline;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.welcome {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fffbe3;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.picture {
+    margin: 0;
+    padding: 0;
+}
+
+.picture img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.picture figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #ca7e0d;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #bf7d15;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0 10px #bf7d15;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    opacity: 0.8;
+}
+
+.card:hover h3,
+.card:hover p {
+    color: #333;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: #bf7d15;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.subscribe {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.subscribe button {
+    background-color: #ecb357;
+    width: 120px;
+    height: 30px;
+}
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center; 
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .card img {
+        width: 100%;
+    }
+}
